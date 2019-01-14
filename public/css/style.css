@@ -1,0 +1,1007 @@
+/* import google fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito:200,200i,300,300i,400,400i,600,600i,700,800,900|Permanent+Marker");
+.discover__list {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 0.9375rem;
+  color: #999999;
+  font-weight: 300;
+  line-height: 1.625rem;
+  margin: 0 0 0.625rem;
+}
+
+h1 {
+  color: #363636;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 3rem;
+  margin: 0 0 0.9375rem;
+}
+
+h2 {
+  color: #363636;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.9375rem;
+  line-height: 1.5rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+/**
+ * Allows you to use retina images at various pixel densities.
+ * Examples:
+ *
+ *   @include retina(/images/mypic.jpg, 2);
+ *   @include retina(/images/mypic.jpg, 3, 100px 100px, left top no-repeat transparent);
+ *
+ * @param  {Value}  $path               The path to the file name minus extension.
+ * @param  {Number} $cap:    2          The highest pixel density level images exist for.
+ * @param  {Value}  $size:   auto auto  The intended width of the rendered image.
+ * @param  {Value}  $extras: null       Any other `background` values to be added.
+ */
+
+/*------------------------------------------------- */
+/* =  General */
+/*------------------------------------------------- */
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+#container {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+#container.active {
+  opacity: 1;
+}
+
+.btn-default {
+  color: #fff;
+  font-size: 0.9375rem;
+  padding: 0.58rem 1.875rem;
+  border: 2px solid #fff;
+  font-weight: 600;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  border-radius: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  margin: 0;
+}
+.btn-default i {
+  font-size: 1rem;
+  margin-right: 0.625rem;
+}
+
+.btn-default:hover {
+  color: #fb646f;
+  background: #fff;
+}
+
+.btn-default-red {
+  padding: 0.58rem 2.693rem;
+  color: #fb646f;
+  border-color: #fb646f;
+  background: transparent;
+}
+
+.btn-default-red:hover {
+  color: #fff;
+  background: #fb646f;
+}
+
+#container {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/*------------------------------------------------- */
+/* =  OWL carousel buttons styling */
+/*------------------------------------------------- */
+
+.owl-theme .owl-controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -1.25rem;
+  height: 0;
+}
+.owl-theme .owl-controls .owl-pagination {
+  display: none;
+}
+.owl-theme .owl-controls .owl-buttons {
+  width: 100%;
+}
+.owl-theme .owl-controls .owl-buttons div {
+  font-size: 0.9375rem;
+  color: #666;
+  line-height: 2.5rem;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e8edf0;
+  outline: none;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.owl-theme .owl-controls .owl-buttons div:hover {
+  color: #fff;
+  background: #fb646f;
+  border-color: transparent;
+}
+.owl-theme .owl-controls .owl-buttons div.owl-prev {
+  float: left;
+  margin-left: -0.3125rem;
+  padding-right: 2px;
+}
+.owl-theme .owl-controls .owl-buttons div.owl-next {
+  float: right;
+  margin-right: -0.3125rem;
+  padding-left: 2px;
+}
+.owl-theme .owl-controls .owl-buttons div.owl-prev:after {
+  content: "\f053";
+  font-family: "FontAwesome";
+}
+.owl-theme .owl-controls .owl-buttons div.owl-next:after {
+  content: "\f054";
+  font-family: "FontAwesome";
+}
+
+/*------------------------------------------------- */
+/* nav tab styling */
+/*------------------------------------------------- */
+
+.nav-tabs {
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 30px;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: #ccc;
+  font-size: 1.1875rem;
+  font-weight: 300;
+  padding: 12px 20px;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #363636;
+  border-bottom: 1px solid #fb646f;
+}
+
+.scroller-menu {
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.scroller-menu.active {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99999999;
+  background: #fff;
+  padding-top: 1px;
+}
+
+/*------------------------------------------------- */
+/* =  top experience block
+/*------------------------------------------------- */
+.top-experience {
+  padding: 6.25rem 0 1px;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/bg.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5),
+  all and (-o-min-device-pixel-ratio: 3 / 2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+  .top-experience {
+    background: #111 url("../upload/bg@2x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .top-experience {
+    background: #111 url("../upload/bg@2x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+.top-experience__box {
+  margin-bottom: 7rem;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+  position: relative;
+}
+.top-experience__box .item {
+  padding: 0 0.9375rem;
+  padding-top: 1rem;
+}
+.top-experience .owl-theme .owl-controls .owl-buttons div {
+  font-size: 1rem;
+  color: #888;
+  line-height: 2.5rem;
+  background: transparent;
+  border: 1px solid transparent;
+}
+.top-experience .owl-theme .owl-controls .owl-buttons div:hover {
+  color: #fb646f;
+}
+.top-experience .owl-theme .owl-controls .owl-buttons .owl-prev {
+  margin-left: -2.8125rem;
+}
+.top-experience .owl-theme .owl-controls .owl-buttons .owl-next {
+  margin-right: -2.8125rem;
+}
+@media (max-width: 1400px) {
+  .top-experience .owl-theme .owl-controls .owl-buttons .owl-prev {
+    margin-left: -1.5rem;
+  }
+  .top-experience .owl-theme .owl-controls .owl-buttons .owl-next {
+    margin-right: -1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .top-experience .owl-theme .owl-controls .owl-buttons .owl-prev {
+    margin-left: 1rem;
+  }
+  .top-experience .owl-theme .owl-controls .owl-buttons .owl-next {
+    margin-right: 1rem;
+  }
+}
+
+.top-experience-white {
+  padding: 5rem 0;
+  background: transparent;
+}
+.top-experience-white__box {
+  margin-bottom: 2rem;
+  margin-left: -12.5rem;
+  margin-right: -12.5rem;
+}
+.top-experience-white .owl-theme .owl-controls {
+  position: absolute;
+  width: 100%;
+  top: initial;
+  margin-top: 0;
+  bottom: -4rem;
+}
+.top-experience-white .owl-theme .owl-controls .owl-pagination {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.top-experience-white .owl-theme .owl-controls .owl-page span {
+  width: 0.625rem;
+  height: 0.625rem;
+  border: 1px solid #d8d8d8;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.top-experience-white .owl-theme .owl-controls .owl-page.active span {
+  border-color: transparent;
+  background: #fb646f;
+}
+.top-experience-white .owl-theme .owl-controls .owl-buttons {
+  display: none;
+}
+@media (max-width: 1580px) {
+  .top-experience-white__box {
+    margin-left: -6.25rem;
+    margin-right: -6.25rem;
+  }
+}
+@media (max-width: 1400px) {
+  .top-experience-white__box {
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
+  }
+}
+@media (max-width: 576px) {
+  .top-experience-white__box {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.top-experience-rated {
+  background: #fff;
+  padding: 4.5rem 0;
+}
+.top-experience-rated .top-experience__box {
+  margin-bottom: 0;
+}
+
+/*------------------------------------------------- */
+/* =  banner block
+/*------------------------------------------------- */
+.banner {
+  padding: 4rem 0;
+  background: #111 url("../images/bg.png") center center no-repeat;
+  background-size: cover;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5),
+  all and (-o-min-device-pixel-ratio: 3 / 2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+  .banner {
+    background: #111 url("../images/bg@2x.png") center center no-repeat;
+    background-size: cover;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .banner {
+    background: #111 url("../images/bg@2x.png") center center no-repeat;
+    background-size: cover;
+  }
+}
+.banner .section-header {
+  margin-bottom: 0;
+}
+.banner .section-header__title:after {
+  background: #fff;
+}
+.banner .section-header__description {
+  max-width: 39.4rem;
+}
+.banner a.btn-default {
+  float: right;
+  width: 15rem;
+  text-align: center;
+  margin-top: 2.8rem;
+}
+.banner a.btn-default:hover {
+  background: #fff;
+  color: #fb646f;
+}
+@media (max-width: 767px) {
+  .banner a.btn-default {
+    float: none;
+  }
+}
+
+/*------------------------------------------------- */
+/* =  how it work block
+/*------------------------------------------------- */
+.how-it-work {
+  padding: 4rem 0;
+  background: #111 url("../upload/ban1.jpg") center center no-repeat;
+  background-size: cover;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5),
+  all and (-o-min-device-pixel-ratio: 3 / 2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+  .how-it-work {
+    background: #111 url("../upload/ban1@2x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .how-it-work {
+    background: #111 url("../upload/ban1@2x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+
+/*------------------------------------------------- */
+/* =  Header
+ *------------------------------------------------- */
+.navbar {
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  width: 100%;
+  z-index: 999999;
+  background: transparent !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+}
+.navbar a.navbar-brand {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  margin-right: 4rem;
+}
+
+header {
+  padding: 0;
+  z-index: 9999999;
+  position: relative;
+}
+
+header.active .navbar {
+  background: #333333 !important; }
+
+.navbar-nav {
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  margin-bottom: -1px;
+}
+.navbar-nav > li > a {
+  color: #fff !important;
+  font-size: 0.9375rem;
+  font-weight: 300 !important;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  padding: 1.25rem 0.9375rem !important;
+  position: relative;
+  border-bottom: 1px solid transparent;
+}
+.navbar-nav > li > a i {
+  font-size: 0.75rem;
+  margin-left: 0.625rem;
+}
+.navbar-nav > li > a:hover {
+  border-color: #fff;
+}
+.navbar-nav li {
+  position: relative;
+}
+
+.navbar-nav.right-list > li > a i {
+  margin-left: 0;
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.navbar-collapse {
+  position: relative;
+}
+
+@media (max-width: 1400px) {
+  .navbar a.navbar-brand {
+    margin-right: 1rem;
+  }
+  .navbar-nav > li > a {
+    padding: 1.25rem 0.5rem !important;
+  }
+  .navbar-nav.right-list > li > a i {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar a.navbar-brand {
+    margin-left: 0.9375rem;
+  }
+  .navbar .navbar-toggler {
+    margin-right: 15px;
+    outline: none;
+  }
+  .navbar-collapse {
+    padding: 1rem 1.25rem;
+    background: #fff;
+    max-height: 260px;
+    overflow-y: scroll;
+  }
+  .navbar-nav > li > a {
+    padding: 0.25rem 0 !important;
+    border: none !important;
+    color: #363636 !important;
+  }
+}
+
+/*------------------------------------------------- */
+/* =  Section header module
+/*------------------------------------------------- */
+.section-header {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.section-header__title {
+  position: relative;
+  padding-bottom: 1rem;
+}
+.section-header__title.white-style {
+  color: #fff;
+}
+.section-header__title:after {
+  content: "";
+  position: absolute;
+  bottom: 0.0625rem;
+  left: 0;
+  width: 1.9rem;
+  height: 0.0625rem;
+  background: #fb646f;
+}
+.section-header__description {
+  max-width: 33.75rem;
+  margin: 0;
+  font-size: 1.0625rem;
+}
+.section-header__description.white-style {
+  color: #fff;
+}
+
+/*------------------------------------------------- */
+/* =  Discover module
+/*------------------------------------------------- */
+.discover {
+  padding: 15rem 0 12.5rem;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/slide1.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5),
+  all and (-o-min-device-pixel-ratio: 3 / 2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+  .discover {
+    background: #111 url("../upload/slide1@2x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .discover {
+    background: #111 url("../upload/slide1@2x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+.discover__description {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 0.9375rem;
+}
+.discover__title {
+  color: #fff;
+  font-size: 4.375rem;
+  line-height: 5rem;
+  font-weight: 600;
+  margin-bottom: 1.875rem;
+  margin-left: -4px;
+}
+.discover__title.events-tab {
+  display: none;
+}
+.discover__list {
+  overflow: hidden;
+}
+.discover__list-item {
+  list-style: none;
+  float: left;
+  margin-right: 0.0625rem;
+}
+.discover__list-item a {
+  padding: 0.9375rem 2.7rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -o-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -o-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.discover__list-item a i {
+  float: left;
+  display: inline-block;
+  margin-top: 0.125rem;
+  font-size: 1.25rem;
+  margin-right: 0.625rem;
+}
+.discover__list-item a.active-list {
+  background: #fff;
+  color: #fb646f;
+}
+.discover__form {
+  padding: 1.875rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-bottom-left-radius: 2px;
+  -o-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-bottom-right-radius: 2px;
+  -o-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -o-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.discover__form select {
+  height: 3.3125rem;
+}
+.discover__form-input {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #adadad;
+  width: 17.5rem;
+  margin-right: 0.625rem;
+  color: #999999;
+  font-size: 0.9375rem;
+  font-weight: 200;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  outline: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  margin-bottom: 0;
+}
+.discover__form-input:focus {
+  background: #fafafa;
+  border-top: 1px solid #ebebeb;
+  border-left: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
+}
+@media (max-width: 1199px) {
+  .discover__form-input {
+    width: 13.75rem;
+  }
+}
+@media (max-width: 991px) {
+  .discover__description {
+    font-size: 1.15rem;
+  }
+  .discover__title {
+    font-size: 3.8rem;
+    line-height: 4.4rem;
+    margin-left: -3px;
+  }
+  .discover__form-input {
+    width: 18.913rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .discover__description {
+    font-size: 1rem;
+  }
+  .discover__title {
+    font-size: 3rem;
+    line-height: 3.8rem;
+    margin-left: -2px;
+  }
+  .discover__list-item a {
+    font-size: 1rem;
+  }
+  .discover__list-item a i {
+    font-size: 0.9375rem;
+  }
+  .discover__form-input {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media (max-width: 576px) {
+  .discover__description {
+    font-size: 1rem;
+  }
+  .discover__title {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-left: 0px;
+  }
+  .discover__list-item a {
+    font-size: 0.9375rem;
+  }
+  .discover__list-item a i {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .discover {
+    padding: 9rem 0 6.5rem;
+  }
+}
+
+/*------------------------------------------------- */
+/* =  Place gal module
+/*------------------------------------------------- */
+.place-gal {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.place-gal__image {
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.place-gal:hover .place-gal__image {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.place-gal__content {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  width: 100%;
+  padding: 0 1.875rem;
+}
+.place-gal__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.place-gal__title a {
+  color: #fff;
+}
+.place-gal__title a:hover {
+  color: #fb646f;
+}
+
+/*------------------------------------------------- */
+/* =  services post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  place post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  event post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  how work post module
+/*------------------------------------------------- */
+.how-work-post {
+  text-align: center;
+  margin-bottom: 1.875rem;
+  padding-top: 1rem;
+}
+.how-work-post__icon {
+  color: #fb646f;
+  font-size: 3.5rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.how-work-post__title {
+  margin-bottom: 1rem;
+}
+.how-work-post__title-white {
+  color: #ffffff;
+}
+.how-work-post__description {
+  max-width: 22rem;
+  margin: 0 auto;
+}
+.how-work-post__description-white {
+  color: #ffffff;
+}
+
+/*------------------------------------------------- */
+/* =  statistic post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  testimonial post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  news post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  article-post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  team post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  category post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  explore module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  listing detail module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  reviews-list module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  Author wrapper module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  user page module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  review-item module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  cities post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  add listing module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  page title module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  blog post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  sidebar module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  single post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  contact form module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  contact form module (in review added elems)
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  contact post module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  sign form module
+/*------------------------------------------------- */
+
+/*------------------------------------------------- */
+/* =  Footer */
+/*------------------------------------------------- */
+.footer__up-part {
+  padding: 3rem 0 1rem;
+}
+
+.footer__widget {
+  margin-bottom: 2rem;
+}
+.footer__widget img {
+  margin-bottom: 0.75rem;
+}
+
+.footer__widget-title {
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.footer__down-part {
+  padding: 1.25rem 0;
+  border-top: 1px solid #edeef0;
+}
+
+.footer__copyright {
+  margin-bottom: 0;
+}
