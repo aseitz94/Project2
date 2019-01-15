@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Single AJAX</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+
+        var queryURL1 = 'https://api.brewerydb.com/v2/search/geo/point?key=';
+        var apiKey = '7666aff49d47c147ba22244312acf587';
+        var queryURL2 = '&lat=';
+        var testLatitude = '35.4303824';
+        var queryURL3 = '&lng=';
+        var testLongitude = '-82.5489214';
+        var queryURL4 = '&radius=';
+        var testRadius = 20;
+
+
+
+        //This function populates globalTeamArray defined above with the season win/loss records from the API
+        function getBreweries(latitude, longitude, radius) {
+            var queryURL = queryURL1 + apiKey + queryURL2 + latitude + queryURL3 + longitude + queryURL4 + radius;
+
+            //"https://api.fantasydata.net/v3/nfl/stats/JSON/Standings/2018REG?key=ad398993c55d46449bde67a4095fef1b";
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            }).then(function (response) {
+                console.log("This is the response from Brewery DB");
+                console.log(response);
+
+                /*for (i = 0; i < 32; i++) {
+                  globalTeamArray[i].wins = response[i].Wins;
+                  globalTeamArray[i].losses = response[i].Losses;
+                  globalTeamArray[i].ties = response[i].Ties;
+                }
+
+                console.log("Global Team Array with Wins/Losses/Ties: ");
+                console.log(globalTeamArray);*/
+
+            });
+        }
+
+        getBreweries(testLatitude, testLongitude, testRadius);
+    </script>
+
+</body>
