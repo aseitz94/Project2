@@ -20,30 +20,38 @@
         var queryURL4 = '&radius=';
         var testRadius = 20;
 
+        //INSERT CODE TO USE ZIPCODES PACKAGE
+        //var zipcodes = require('zipcodes');
+        //var oldCityPhillyZip = zipcodes.lookup(19106);
+        //console.log('Old City Latitude: ' + oldCityPhillyZip.latitude);
 
 
-        //This function populates globalTeamArray defined above with the season win/loss records from the API
+        //This function gets Brewery records from the API based on provided location(latitude, longitude) and search radius in miles
         function getBreweries(latitude, longitude, radius) {
+            console.log('testing getBreweries function');
             var queryURL = queryURL1 + apiKey + queryURL2 + latitude + queryURL3 + longitude + queryURL4 + radius;
-
-            //"https://api.fantasydata.net/v3/nfl/stats/JSON/Standings/2018REG?key=ad398993c55d46449bde67a4095fef1b";
-
+            const apiKeyProxy =
+                'gMIHJxXUTxTdI3_v6Rnzo7uD3wZQcQ4sYrppHS3xRRGQM7iRvtaCPunKOB1auZmzlxJG2cvpmhPNc2WPRaxux6DYqUKT15Cxu_U5pF9bsOe--uerTHBNZ-x3LvXYW3Yx';
+            const proxyUrl = 'https://shielded-hamlet-43668.herokuapp.com/';
             $.ajax({
-                url: queryURL,
-                method: "GET"
+                async: false,
+                url: proxyUrl + queryURL,
+                method: "GET",
+                headers: {
+                    authorization: 'Bearer ' + apiKeyProxy
+                }
             }).then(function (response) {
                 console.log("This is the response from Brewery DB");
-                console.log(response);
+                console.log(response.data);
 
-                /*for (i = 0; i < 32; i++) {
-                  globalTeamArray[i].wins = response[i].Wins;
-                  globalTeamArray[i].losses = response[i].Losses;
-                  globalTeamArray[i].ties = response[i].Ties;
+                var responseArray = new Array;
+                for (i = 0; i < response.data.length; i++) {
+                    responseArray[i] = response.data[i];
+                    console.log('This is element ' + i + ' of the Breweries Array');
+                    console.log(response.data[i]);
                 }
 
-                console.log("Global Team Array with Wins/Losses/Ties: ");
-                console.log(globalTeamArray);*/
-
+                return responseArray;
             });
         }
 
