@@ -69,90 +69,6 @@ $(document).ready(function($) {
 	});
 
 	/*-------------------------------------------------*/
-	/* =  tabs block 
-	/*-------------------------------------------------*/
-
-	var tabsLink = $('.tabs-block__list-item a');
-
-	tabsLink.on('click', function(event) {
-		event.preventDefault();
-
-		tabsLink.removeClass('active-list');
-		$(this).addClass('active-list');
-
-		var currentHashAtt = $(this).attr('href'),
-			tabContentItem = $('.tabs-block__content-tab.active-tab'),
-			currentTabContentItem = $(currentHashAtt);
-
-		if( !currentTabContentItem.hasClass('active-tab') ) {
-			tabContentItem.fadeOut(300, function() {
-				$(this).removeClass('active-tab');
-				currentTabContentItem.fadeIn(300, function() {
-					$(this).addClass('active-tab');
-				});
-			});
-		}
-
-	});
-
-	/*-------------------------------------------------*/
-	/* =  rating stars in reviews 
-	/*-------------------------------------------------*/
-
-	var rateLine = $('.contact-form__rate-bx'),
-		rateActual = $('.rate-actual');
-
-	rateLine.find('i').on('hover', function() {
-		var indexStar = $(this).index();
-		for(var j=0; j <= 9; j++) {
-			rateLine.find('i:lt(' + indexStar+1 + ')').addClass('active');
-			rateLine.find('i:gt(' + indexStar + ')').removeClass('active');
-		}
-	});
-
-	rateLine.find('i').on('click', function() {
-		var indexStar = $(this).index();
-		for(var j=0; j <= 9; j++) {
-			rateLine.find('i:lt(' + indexStar+1 + ')').addClass('selected');
-			rateLine.find('i:gt(' + indexStar + ')').removeClass('selected');
-		}
-		rateActual.text(indexStar + 1);
-	});
-
-	rateLine.on('mouseout', function() {
-		rateLine.find('i').removeClass('active');
-	});
-
-	/*-------------------------------------------------*/
-	/* =  advanced explore toggle 
-	/*-------------------------------------------------*/
-
-	var openAdvancedBtn = $('a.advanced-toggle'),
-		advancedBox = $('.explore__form-advanced');
-
-	openAdvancedBtn.on('click', function(event) {
-		event.preventDefault();
-
-		advancedBox.slideToggle();
-
-	});
-
-
-	/*-------------------------------------------------*/
-	/* =  count increment
-	/*-------------------------------------------------*/
-
-	$('.statistic-post').appear(function() {
-		$('.timer').countTo({
-			speed: 4000,
-			refreshInterval: 60,
-			formatter: function (value, options) {
-				return value.toFixed(options.decimals);
-			}
-		});
-	});
-	
-	/*-------------------------------------------------*/
 	/* =  OWL carousell
 	/*-------------------------------------------------*/
 
@@ -206,25 +122,6 @@ $(document).ready(function($) {
 	/* ---------------------------------------------------------------------- */
 
 	$('.js-example-basic-multiple').select2();
-	
-
-	/*-------------------------------------------------*/
-	/* =  scroll between sections
-	/*-------------------------------------------------*/
-
-	$('.navigate-section > li > a[href*=#], a.navigate-btn[href*=#]').on('click', function(event) {
-		event.preventDefault();
-		var dataOffset = 0;
-
-		if ($(this).is("[data-offset]")) {
-		    dataOffset = parseInt($(this).attr('data-offset'));
-		}
-
-		var offset = 90 - dataOffset;
-		$('html, body').animate({
-			scrollTop: $($(this).attr('href')).offset().top - offset
-		}, 500, 'linear');
-	});
 	
 	/*-------------------------------------------------*/
 	/* =  add active state in nav menu for active section
@@ -324,23 +221,6 @@ $(document).ready(function($) {
 	});
 
 	/* ---------------------------------------------------------------------- */
-	/*	Follow button
-	/* ---------------------------------------------------------------------- */
-
-	var followButton = $('a.follow-btn, a.user-detail__profile-btn');
-
-	followButton.on('click', function(event) {
-		event.preventDefault();
-		if(!$(this).hasClass('following')) {
-			$(this).addClass('following');
-			$(this).html('<i class="la la-eye"></i> Following');
-		} else {
-			$(this).removeClass('following');
-			$(this).html('<i class="la la-eye"></i> Follow');
-		}
-	});
-
-	/* ---------------------------------------------------------------------- */
 	/*	Load more posts from container
 	/* ---------------------------------------------------------------------- */
 
@@ -396,36 +276,6 @@ $(document).ready(function($) {
 	});
 
 	/* ---------------------------------------------------------------------- */
-	/*	Contact Form
-	/* ---------------------------------------------------------------------- */
-
-	var submitContact = $('#submit_contact'),
-		message = $('#msg');
-
-	submitContact.on('click', function(e){
-		e.preventDefault();
-
-		var $this = $(this);
-		
-		$.ajax({
-			type: "POST",
-			url: 'contact.php',
-			dataType: 'json',
-			cache: false,
-			data: $('#contact-form').serialize(),
-			success: function(data) {
-
-				if(data.info !== 'error'){
-					$this.parents('form').find('input[type=text],textarea,select').filter(':visible').val('');
-					message.hide().removeClass('alert-success').removeClass('alert-danger').addClass('alert-success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-				} else {
-					message.hide().removeClass('alert-success').removeClass('alert-danger').addClass('alert-danger').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-				}
-			}
-		});
-	});
-
-	/* ---------------------------------------------------------------------- */
 	/*	Header animate after scroll
 	/* ---------------------------------------------------------------------- */
 	
@@ -458,6 +308,3 @@ $(document).ready(function($) {
 function Resize() {
 	$(window).trigger('resize');
 }
-
-
-

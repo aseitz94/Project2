@@ -19,25 +19,25 @@
 <div id="container">
 <!-- Header -->
 <header class="clearfix">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container">
-			<a class="navbar-brand" href="index.html">
-				<img src="images/logo.png" alt="">
-			</a>
-			<button class="navbar-toggler" href="index.html" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto right-list">
-					<!-- Ashley's pages linked here -->
-					<li><a href="sign-page.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Sign In</a></li>
-					<li><a href="sign-page.html"><i class="fa fa-user-o" aria-hidden="true"></i>Register</a></li>
-				</ul>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.png" alt="">
+				</a>
+				<button class="navbar-toggler" href="index.html" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto right-list">
+						<!-- Ashley's pages linked here -->
+						<li><a href="sign-page.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Sign In</a></li>
+						<li><a href="sign-page.html"><i class="fa fa-user-o" aria-hidden="true"></i>Register</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</nav>
-</header>
+		</nav>
+	</header>
 <!-- End Header -->
 
 <!-- discover-module section -->
@@ -65,8 +65,19 @@
 		</ul>
 		<form class="discover__form">
 			<div class="row justify-content-md-center">
-				<input class="discover__form-input center" type="text" name="place-event" id="place-event" placeholder="Zip Code" />
-				<button class="btn-default btn-default-red" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+				<input class="discover__form-input" type="text" name="place-event" id="place-event" placeholder="Zip Code" />
+					<select class="discover__form-input js-example-basic-multiple">
+						<option>Radius</option>
+						<option>10</option>
+						<option>25</option>
+						<option>50</option>
+						<option>75</option>
+						<option>100</option>
+					</select>
+				<a class="btn-default btn-default-red" href="explore-sidebar-map.html">
+					<i class="fa fa-search" aria-hidden="true"></i>
+						Search
+				</a>
 			</div>
 		</form>
 	</div>
@@ -126,7 +137,7 @@
 							</h2>
 							<a class="btn-default" href="#">
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								About
+								About Us
 							</a>
 						</div>
 					</div>
@@ -221,8 +232,8 @@
 
 			</div>
 			<div class="col-md-4">
-				<a class="btn-default" href="#">
-					<i class="fa fa-check-circle-o" aria-hidden="true"></i>
+				<a class="btn-default-red" href="#">
+					<i class="" aria-hidden="true"></i>
 					Register Now
 				</a>
 			</div>
@@ -333,7 +344,7 @@
 					<div class="footer__widget text-widget">
 						<img src="images/logo-black.png" alt="triptip-logo">
 						<p class="footer__widget-description">
-							HopStop is a one stop shop for craft beer lovers. 
+							 HopStop was created as a Penn Coding Bootcamp assignment. 
 						</p>
 					</div>
 
@@ -351,12 +362,10 @@
 
 				</div>
 				<div class="col-md-4">
-
-					<div class="footer__widget text-widget">
-						<h2 class="footer__widget-title">
+					<a class="btn-default btn-default-red" href="about.html">
+						<i class="fa fa-check-circle-o" aria-hidden="true"></i>
 							About Us
-						</h2>
-					</div>
+					</a>
 
 				</div>
 			</div>
