@@ -3,3 +3,16 @@ CREATE DATABASE hopStopdb;
 
 DROP DATABASE IF EXISTS testdb;
 CREATE DATABASE testdb;
+
+DROP DATABASE IF EXISTS passportdb;
+CREATE DATABASE passportdb;
+
+USE passportdb;
+
+CREATE TABLE user (
+id INT AUTO_INCREMENT,
+email VARCHAR (150),
+password VARCHAR (50),
+PRIMARY KEY (id),
+);
+
