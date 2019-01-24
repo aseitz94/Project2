@@ -11,14 +11,20 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+var methodOverride = require('method-override')
+app.use(methodOverride('_method'));
 
 // Handlebars
+var hbs = exphbs.create({
+  defaultLayout: 'main'
+});
+
+
 app.engine(
   "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
+  hbs.engine
 );
+
 app.set("view engine", "handlebars");
 
 // Routes
@@ -43,5 +49,7 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
-
+module.exports = function() {
+  this.BreweryZip = require('./routes/BreweryZip');
+}
 module.exports = app;

@@ -1643,6 +1643,7 @@ li:hover > .megadropdown {
   width: 50%;
   padding: 0 0.9375rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 .explore__wrap.iso-call {
   margin: 0 -0.9375rem;

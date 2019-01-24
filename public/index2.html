@@ -1,13 +1,30 @@
+<!doctype html>
+
+<html lang="en" class="no-js">
+
+<head>
+	<title>HopStop</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="images/marker.png">
+	<link rel="stylesheet" href="css/hopstop-assets.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
 <!-- Container -->
 <div id="container">
 <!-- Header -->
 <header class="clearfix">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
-				<a class="navbar-brand" href="/">
+				<a class="navbar-brand" href="index.html">
 					<img src="images/logo.png" alt="">
 				</a>
-				<button class="navbar-toggler" href="/" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				<button class="navbar-toggler" href="index.html" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -46,22 +63,22 @@
 				<a class="events" href="#"><i class="la la-compass" aria-hidden="true"></i>Certified Craft</a>
 			</li>
 		</ul>
-		<form  method="POST" class="discover__form" action="/search">
+		<form class="discover__form">
 			<div class="row justify-content-md-center">
-				<input class="discover__form-input" type="text" name="place_event" placeholder="Zip Code" id="place_event">
-          <select class="discover__form-input js-example-basic-multiple" id="radius" name="radius">
-						<option selected disabled>Radius</option>
-						<option >10</option>
-						<option >25</option>
-						<option >50</option>
-						<option >75</option>
-						<option >100</option>
+				<input class="discover__form-input" type="text" name="place-event" id="place-event" placeholder="Zip Code" />
+					<select class="discover__form-input js-example-basic-multiple">
+						<option>Radius</option>
+						<option>10</option>
+						<option>25</option>
+						<option>50</option>
+						<option>75</option>
+						<option>100</option>
 					</select>
-				<button class="btn-default btn-default-red" type="submit">
+				<a class="btn-default btn-default-red" href="explore-sidebar-map.html">
 					<i class="fa fa-search" aria-hidden="true"></i>
 						Search
-				</button>
-				<!--button type="submit" id="displayMap"></button-->
+				</a>
+				<button id="displayMap"></button>
 			</div>
 		</form>
 	</div>
@@ -375,7 +392,7 @@
 </div>
 <!-- End Container -->
 
-<script src="/js/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/jquery.migrate.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiqrIen8rWQrvJsu-7f4rOta0fmI5r2SI"></script>
 <!--build:js js/triptip-plugins.min.js -->
@@ -395,3 +412,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.countTo.js"></script>
 <script src="js/script.js"></script>
+
+</body>
+
+</html>
