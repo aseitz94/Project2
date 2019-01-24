@@ -8,6 +8,7 @@
   <link rel="icon" href="images/marker.png">
   <link rel="stylesheet" href="../public/css/hopstop-assets.min.css">
   <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
   <title>User Profile Home Page</title>
 </head>
 
@@ -16,13 +17,10 @@
     body{
         background-color:#f6f4e5;
     }
-    #sign-in{
+    #log-out{
         color:white;
     }
 
-    #register{
-        color: white;
-    }
     #userInfo {
         width: 100%;
         height: 300px;
@@ -47,6 +45,9 @@
         
     }
     #visited-link{
+        font-family: 'Bree Serif', serif;
+        font-size: 40px;
+        padding-left: -4;
         color:white;
         text-decoration: none;
     }
@@ -57,17 +58,19 @@
         text-shadow:10px, 10px, 10px #5a5a5a;
     }
     #review-link{
-        color:black;
+        font-family: 'Bree Serif', serif;
+        font-size: 40px;
+        padding-left: -4;
+        color:white;
         text-decoration: none;
-        text-shadow:10px, 10px, 10px #5a5a5a;
     }
     #review-link:hover{
-        background-color:wheat;
+        color:#ffda00;
 
     }
 
     #review-card{
-        background-color:#f6f4e5;
+        background-color:#5a5a5a;
     }
 
     .card-img{
@@ -80,7 +83,10 @@
     }
 
     #favorites-link{
-        color: white;
+        font-family: 'Bree Serif', serif;
+        font-size: 40px;
+        padding-left: -4;
+        color:white;
         text-decoration: none;
     }
     #favorites-link:hover{
@@ -138,27 +144,18 @@
         <div class="row">
 
             <!--Where I've Been-->
-            <div class="card col-3 ml-5 mr-5" style="width: 18rem;" id="visited-card">
+            <div class="card col-3 ml-5 mr-5 py-4" style="width: 18rem;" id="visited-card">
                 <div class="card-body">
                         <a href ="../html/profile_visited.html" id="visited-link">
-                            <h5 class="card-title text-center">Where I've Been</h5>
+                            <p class="card-text text-center">Where I've Been</p>
                         </a>
                 </div>
             </div>
                 
 
                   <!--My Reviews-->
-            <div class="col-3 mr-5 ml-5 mb-4" style="width: 18rem;">
-                <!-- <div class="card text-white" >
-                        <img class="card-img"  src="https://images.unsplash.com/photo-1535359056830-d4badde79747?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1404&q=80" alt="Card image">
-                        <div class="card-img-overlay">
-                           <a href="../html/profile_reviews.html" id="review-link">
-                          <h3 class="card-title text-center mb-4  bg-white ">Review</h3>
-                        </a>
-                        </div>
-                </div> -->
-                <div class="card"  id="review-card">
-                        <img class="card-img-top" src="https://images.unsplash.com/photo-1535359056830-d4badde79747?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1404&q=80" alt="Card image" alt="Card image cap">
+            <div class="col-3 mr-5 ml-5 py-5" style="width: 18rem;" id="review-card">
+                <div class="card-body">
                         <div class="card-title" >
                             <a href="../html/profile_reviews.html" id="review-link" >
                                 <p class="card-title text-center">Reviews</p>
@@ -169,19 +166,17 @@
             </div>
 
                     <!--My Favorite Places-->
-            <div class="col-3 ml-5" style="width: 18rem;" id="favorites-card">
-                <div class="card text-white">
-                    <img class="card-img" id="favorite-img" src="https://images.unsplash.com/photo-1535508225016-9c4a8d41324a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1482&q=80">
-                       <div class="card-img-overlay">
+            <div class="col-3 ml-5 py-4" style="width: 18rem;" id="favorites-card">
+                <div class="card-body">
                             <a href ="../html/profile_favorites.html" id="favorites-link">
-                                <h5 class="card-title text-center">My Favorites</h5>
+                                <p class="card-title text-center">My Favorites</p>
                             </a>
-                        </div>
                 </div>
             </div>
         </div>
                         
     </div>
+    <br>
 </body>
 
 </html>
