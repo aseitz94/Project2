@@ -19,6 +19,7 @@
     "mysql2": "^1.6.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "prettier": "^1.16.1",
     "sequelize": "^4.42.0"
   },
   "devDependencies": {
@@ -28,7 +29,6 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0"
-    
   },
   "directories": {
     "test": "test"
