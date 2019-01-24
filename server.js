@@ -17,9 +17,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Sessions to keep track of user's login status
-app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
+// eslint-disable-next-line prettier/prettier
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 

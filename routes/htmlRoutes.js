@@ -12,7 +12,7 @@ module.exports = function(app) {
     res.sendFile(path.join(_dirname, "../public/index.html"));
   });
 
-  app.get("/sign-in", function(req, res) {
+  app.get("/login", function(req, res) {
     // If the user already has an account send them to their profile page
     if (req.user) {
       res.redirect("..public/profile-html/profile_index");
@@ -22,7 +22,7 @@ module.exports = function(app) {
 
   app.get("/profile", isAuthenticated, function(req, res) {
     res.sendFile(
-      path.join(_dirname, "../public/profile-html/profile_favorites.html")
+      path.join(_dirname, "../public/profile-html/profile_index.html")
     );
   });
 
