@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 //node packages
 var zipcodes = require("zipcodes");
 var request = require("request");
 
 var queryURL1 = "https://api.brewerydb.com/v2/search/geo/point?key=";
-var queryURLID = "http://api.brewerydb.com/v2/{endpoint}/?key=abcdef"
+var queryURLID = "http://api.brewerydb.com/v2/{endpoint}/?key=abcdef";
 var queryURLNEW = "http://api.brewerydb.com/v2/brewery/";
 //api key for testing
 var apiKey = "7666aff49d47c147ba22244312acf587";
@@ -27,44 +28,63 @@ var breweriesOpenArray = [];
 module.exports = {
   getBreweriesZip: function(zipCode, radius, breweries, callback) {
     var zipObject = zipcodes.lookup(zipCode);
-    if(zipObject!=undefined){
+    if (zipObject !== undefined) {
       var latitude = zipObject.latitude;
       var longitude = zipObject.longitude;
-      var queryURL =  queryURL1 + apiKey02 + queryURL2 + latitude + queryURL3 + longitude + queryURL4 + radius;
+      var queryURL =
+        queryURL1 +
+        apiKey02 +
+        queryURL2 +
+        latitude +
+        queryURL3 +
+        longitude +
+        queryURL4 +
+        radius;
       //var queryURL = queryURLNEW + latitude + queryURL3 + longitude + queryURL4 + radius + "&search="+zipCode;
       console.log(queryURL);
       request(queryURL, function(error, response, body) {
         // If the request is successful (i.e. if the response status code is 200)
-        if (!error && response.statusCode === 200 && JSON.parse(body).data != undefined) {
+        if (
+          !error &&
+          response.statusCode === 200 &&
+          JSON.parse(body).data !== undefined
+        ) {
           //empty the Brewery Array
           breweriesArray = [];
           for (var i = 0; i < JSON.parse(body).data.length; i++) {
             breweries[i] = JSON.parse(body).data[i];
             //add brewery object to external array
-            if(JSON.parse(body).data[i].openToPublic === "Y" && JSON.parse(body).data[i].isClosed === "N"){//validate
+            if (
+              JSON.parse(body).data[i].openToPublic === "Y" &&
+              JSON.parse(body).data[i].isClosed === "N"
+            ) {
+              //validate
               breweriesArray.push(breweries[i]);
-            }   
+            }
           }
           result = breweriesArray;
           return callback(result, false);
-        }else{
+        } else {
           return callback(null, true);
         }
       });
-    }else{
+    } else {
       return callback(null, true);
     }
-  
   },
   getBreweryGuild: function(id, callback) {
     var guild = "/guilds/?key=";
     var queryURL = queryURLNEW + id + guild + apiKey02;
     console.log(queryURL);
     request(queryURL, function(error, response, body) {
-      if (!error && response.statusCode === 200 && JSON.parse(body).data != undefined) {
+      if (
+        !error &&
+        response.statusCode === 200 &&
+        JSON.parse(body).data !== undefined
+      ) {
         result = JSON.parse(body).data;
         return callback(result, false);
-      }else{
+      } else {
         return callback(null, true);
       }
     });
@@ -74,17 +94,19 @@ module.exports = {
     var queryURL = queryURLNEW + id + location + apiKey02;
     console.log(queryURL);
     request(queryURL, function(error, response, body) {
-      if (!error && response.statusCode === 200 && JSON.parse(body).data != undefined) {
+      if (
+        !error &&
+        response.statusCode === 200 &&
+        JSON.parse(body).data !== undefined
+      ) {
         result = JSON.parse(body).data;
         return callback(result, false);
-      }else{
+      } else {
         return callback(null, true);
       }
     });
   }
-
-}
-
+};
 
 /*
 function getOpenBreweries(allBreweries, openBreweries) {

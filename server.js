@@ -15,10 +15,8 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
-var methodOverride = require('method-override')
-app.use(methodOverride('_method'));
-
-
+var methodOverride = require("method-override");
+app.use(methodOverride("_method"));
 
 //Sessions to keep track of user's login status
 // eslint-disable-next-line prettier/prettier
@@ -29,7 +27,9 @@ app.use(passport.session());
 // Handlebars
 app.engine(
   "handlebars",
-  hbs.engine
+  exphbs({
+    defaultLayout: "main"
+  })
 );
 app.set("view engine", "handlebars");
 
@@ -57,8 +57,8 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = function() {
-  this.BreweryZip = require('./routes/BreweryZip');
-}
+  this.BreweryZip = require("./routes/BreweryZip");
+};
 //
 
 module.exports = app;
