@@ -578,7 +578,7 @@ header.white-header-style a.btn-default:hover {
   margin-bottom: 0;
 }
 .search-form__input-location {
-  width: 10.8rem;
+  width: 5rem;
 }
 .search-form__submit {
   background: transparent;
@@ -610,7 +610,7 @@ header.white-header-style a.btn-default:hover {
 }
 @media (max-width: 1400px) {
   .search-form__input-holders {
-    width: 23rem;
+    width: 12rem;
   }
   .search-form__input {
     width: 13rem;
@@ -740,7 +740,7 @@ li:hover > .megadropdown {
     margin-left: 0.9375rem;
   }
   .navbar .navbar-toggler {
-    margin-right: 15px;
+    margin-right: 5px;
     outline: none;
   }
   .navbar a.btn-default,
@@ -1643,6 +1643,7 @@ li:hover > .megadropdown {
   width: 50%;
   padding: 0 0.9375rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 .explore__wrap.iso-call {
   margin: 0 -0.9375rem;
