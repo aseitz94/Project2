@@ -1,6 +1,10 @@
 function displayMap() {
     var googleTag = $(
+<<<<<<< HEAD
+        ' < script async defer src = “https: maps.googleapis.com / maps / api / js ? key = AIzaSyA8MspKkrm - iWGzPOfeYDsDvQssYSMTt4E & callback = initMap” > ’
+=======
         ' < script async defer src = “https: maps.googleapis.com / maps / api / js ? key = AIzaSyA8MspKkrm - iWGzPOfeYDsDvQssYSMTt4E & callback = initMap” > '
+>>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
     )
     $("body").append(googleTag);
 }

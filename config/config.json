@@ -2,19 +2,19 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "hopStopdb",
+    "database": "hopstopdb",
     "host": "localhost",
     "dialect": "mysql",
     "port": 3306
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "root",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false,
-    "port":3306
+    "port": 3306
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",

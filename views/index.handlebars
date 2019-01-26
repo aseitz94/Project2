@@ -1,7 +1,12 @@
 <!-- Container -->
 <div id="container">
+<<<<<<< HEAD
+	<!-- Header -->
+	<header class="clearfix">
+=======
 <!-- Header -->
 <header class="clearfix">
+>>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
 				<a class="navbar-brand" href="/">
@@ -14,13 +19,247 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto right-list">
 						<!-- Ashley's pages linked here -->
+<<<<<<< HEAD
+						<li><a href="sign-page.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Sign In</a></li>
+						<li><a href="sign-page.html"><i class="fa fa-user-o" aria-hidden="true"></i>Register</a></li>
+=======
 						<li><a href="login-page.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Login</a></li>
 						<li><a href="signup.html"><i class="fa fa-user-o" aria-hidden="true"></i>Sign Up</a></li>
+>>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
+<<<<<<< HEAD
+	<!-- End Header -->
+
+	<!-- discover-module section -->
+	<section class="discover">
+		<div class="container">
+			<p class="discover__description">
+				Find out perfect places to hangout in your city.
+			</p>
+			<h1 class="discover__title places-tab">
+				Discover local breweries
+			</h1>
+
+			<!-- by default discover__title events tab is hidden -->
+			<h1 class="discover__title events-tab">
+				Independent Craft Breweries
+			</h1>
+
+			<ul class="discover__list">
+				<li class="discover__list-item">
+					<a class="place active-list" href="#"><i class="la la-compass" aria-hidden="true"></i>Breweries</a>
+				</li>
+				{{!-- <li class="discover__list-item">
+					<a class="events" href="#"><i class="la la-compass" aria-hidden="true"></i>Certified Craft</a>
+				</li> --}}
+			</ul>
+			<form method="POST" class="discover__form" action="/search">
+				<div class="row justify-content-md-center">
+					<input class="discover__form-input" type="text" name="place_event" placeholder="Zip Code" id="place_event">
+					<select class="discover__form-input js-example-basic-multiple" id="radius" name="radius">
+						<option selected disabled>Radius</option>
+						<option>10</option>
+						<option>25</option>
+						<option>50</option>
+						<option>75</option>
+						<option>100</option>
+					</select>
+					<select class="discover__form-input js-example-basic-multiple" id="certified" name="certified">
+						<option selected disabled>Certified Craft Only</option>
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+					<button class="btn-default btn-default-red" type="submit">
+						<i class="fa fa-search" aria-hidden="true"></i>
+						Search
+					</button>
+					<!--button type="submit" id="displayMap"></button-->
+				</div>
+			</form>
+		</div>
+	</section>
+	<!-- End top-experience-block -->
+
+	<!-- banner-block -->
+	<section class="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+
+					<!-- section-header module -->
+					<div class="section-header">
+						<h1 class="section-header__title white-style">
+							Join Our Awesome Community
+						</h1>
+						<p class="section-header__description white-style">
+							"Beer is proof God loves us and wants us to be happy" - Benjamin Franklin
+						</p>
+					</div>
+					<!-- end section-header module -->
+
+				</div>
+				<div class="col-md-4">
+					<a class="btn-default-red" href="#">
+						<i class="" aria-hidden="true"></i>
+						Register Now
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner-block -->
+
+	<!-- how-it-work-block -->
+	<section class="how-it-work">
+		<div class="container">
+
+			<!-- section-header module -->
+			<div class="section-header">
+				<h1 class="section-header__title white-style">
+					How It Works
+				</h1>
+				<p class="section-header__description white-style">
+					Explore some of the best breweries around you.
+				</p>
+			</div>
+			<!-- end section-header module -->
+
+			<div class="how-it-work__box">
+				<div class="row">
+
+					<div class="col-lg-4 col-md-6">
+
+						<!-- how-work-post module -->
+						<div class="how-work-post">
+
+							<span class="how-work-post__icon">
+								<i class="la la-compass" aria-hidden="true"></i>
+							</span>
+
+							<h2 class="how-work-post__title how-work-post__title-white">
+								HopStop Suggestions
+							</h2>
+
+							<p class="how-work-post__description how-work-post__description-white">
+								Not sure where to begin? HopStop automatically suggests breweries based on your location.
+							</p>
+
+						</div>
+						<!-- end how-work-post module -->
+
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+
+						<!-- how-work-post module -->
+						<div class="how-work-post">
+
+							<span class="how-work-post__icon">
+								<i class="la la-binoculars" aria-hidden="true"></i>
+							</span>
+
+							<h2 class="how-work-post__title how-work-post__title-white">
+								Search
+							</h2>
+
+							<p class="how-work-post__description how-work-post__description-white">
+								HopStop will help you find breweries.
+							</p>
+
+						</div>
+						<!-- end how-work-post module -->
+
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+
+						<!-- how-work-post module -->
+						<div class="how-work-post">
+
+							<span class="how-work-post__icon">
+								<i class="la la-plus-circle" aria-hidden="true"></i>
+							</span>
+
+							<h2 class="how-work-post__title how-work-post__title-white">
+								Add Your Favorite Breweries
+							</h2>
+
+							<p class="how-work-post__description how-work-post__description-white">
+								Create an account and log your breweries, add to your favorites and rate them.
+							</p>
+
+						</div>
+						<!-- end how-work-post module -->
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- End how-it-work-block -->
+
+	<!-- footer block module -->
+	<footer class="footer">
+		<div class="container">
+
+			<div class="footer__up-part">
+				<div class="row">
+					<div class="col-md-4">
+
+						<div class="footer__widget text-widget">
+							<img src="images/logo-black.png" alt="triptip-logo">
+							<p class="footer__widget-description">
+								HopStop was created as a Penn Coding Bootcamp assignment.
+							</p>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+
+						<div class="footer__widget subscribe-widget">
+							<h2 class="footer__widget-title">
+								Certified Independent Craft Breweries
+							</h2>
+							<p class="footer__widget-description">
+								The Brewers Association has provided the Independent Craft Brewer Seal to denote breweries that are Certified
+								Independent Craft. Looks for this seal to identify them.
+							</p>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+						<a class="btn-default btn-default-red" href="about.html">
+							<i class="fa fa-check-circle-o" aria-hidden="true"></i>
+							About Us
+						</a>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="footer__down-part">
+				<div class="row">
+					<div class="col-md-7">
+						<p class="footer__copyright">
+							© Copyright 2019 - All Rights Reserved
+						</p>
+					</div>
+					<div class="col-md-5">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</footer>
+	<!-- End footer -->
+=======
 <!-- End Header -->
 
 <!-- discover-module section -->
@@ -371,6 +610,7 @@
 
 </footer>
 <!-- End footer -->
+>>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 
 </div>
 <!-- End Container -->
@@ -394,4 +634,8 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.countTo.js"></script>
+<<<<<<< HEAD
 <script src="js/script.js"></script>
+=======
+<script src="js/script.js"></script>
+>>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
