@@ -1,6 +1,10 @@
 require("dotenv").config();
+
 var express = require("express");
 var exphbs = require("express-handlebars");
+var session = require("express-session");
+
+var passport = require("./config/passport");
 
 var db = require("./models");
 
@@ -13,8 +17,19 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 app.use(express.static("public"));
+<<<<<<< HEAD
 var methodOverride = require('method-override')
 app.use(methodOverride('_method'));
+=======
+var methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
+//Sessions to keep track of user's login status
+// eslint-disable-next-line prettier/prettier
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+>>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 
 // Handlebars
 var hbs = exphbs.create({
@@ -53,7 +68,17 @@ db.sequelize.sync(syncOptions).then(function () {
     );
   });
 });
+<<<<<<< HEAD
 module.exports = function () {
   this.BreweryZip = require('./routes/BreweryZip');
 }
 module.exports = app;
+=======
+
+module.exports = function() {
+  this.BreweryZip = require("./routes/BreweryZip");
+};
+//
+
+module.exports = app;
+>>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f

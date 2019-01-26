@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var Brewery = sequelize.define("Brewery", {
     breweryName: DataTypes.STRING,
     address: DataTypes.STRING,
@@ -8,10 +8,9 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-  Brewery.associate = function (models) {
-
+  Brewery.associate = function(models) {
     Brewery.belongsToMany(models.User, {
-      through: 'UserBrewery'
+      through: "UserBrewery"
     });
   };
 

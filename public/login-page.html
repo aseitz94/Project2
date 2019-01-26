@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/styles.css"
+      media="screen"
+      title="no title"
+      charset="utf-8"
+    />
+    <link rel="icon" href="images/marker.png" />
+    <link rel="stylesheet" href="../public/css/hopstop-assets.min.css" />
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+    <title>Sign-In Page</title>
+  </head>
+
+  <style>
+      form.signup,
+      form.login {
+            margin-top: 50px;
+}
+    #loginForm{
+        display:block;
+        margin-left: auto;
+        margin-right:auto;
+        margin-top: 50px;
+        background-color: white;
+    }
+
+    /* #containerBG{
+        opacity: .5;
+    } */
+    html {
+      height: 100%;
+      background-color: grey;
+    }
+    body {
+      height: 100%;
+      background-image: url("https://images.unsplash.com/photo-1532382473729-3c77e06b3e9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1490&q=80");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    #login {
+      color: white;
+    }
+
+    #signup {
+      color: white;
+    }
+
+    #login-card {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #888;
+    }
+  </style>
+
+  <body>
+    <!-- Header -->
+    <header class="clearfix">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            href="index.html"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto right-list nav-css">
+              <!-- Ashleigh's pages linked here -->
+              <li>
+                <a href="login-page.html" id="login"
+                  ><i
+                    class="fa fa-arrow-circle-o-right ml-3"
+                    aria-hidden="true"></i>Login</a>
+              </li>
+              <li>
+                <a href="signup.html" id="signup">
+                    <i class="fa fa-user-o ml-2" aria-hidden="true"></i>
+                    Sign Up
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+    <!--Passport LOGIN-->
+    <div class="container" id="containerBG">
+      <div class="row"  >
+        <div class="col-md-6 col-md-offset-3" id="loginForm">
+          <h2>Login Form</h2>
+          <form class="login">
+            <div class="form-group">
+              <label for="InputEmail1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email-input"
+                placeholder="Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="InputPassword1">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password-input"
+                placeholder="Password"
+              />
+            </div>
+            <button type="submit" class="btn btn-default">Login</button>
+          </form>
+          <br />
+          <p>Or sign up <a href="signup.html">here</a></p>
+        </div>
+      </div>
+    </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+    
+  </body>
+</html>
