@@ -1,66 +1,3 @@
-<<<<<<< HEAD
-<!-- Container -->
-<div id="container">
-	<!-- Header -->
-	<header class="clearfix white-header-style fullwidth-with-search">
-
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-
-				<a class="navbar-brand" href="/">
-					<img src="images/logo-black.png" alt="">
-				</a>
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<form class="search-form" method="POST" action="/search">
-						<div class="search-form__input-holders">
-							<input class="search-form__input" type="text" name="place_event" id="place_event" placeholder="ZipCode" />
-						</div>
-						<div class="search-form__input-holders">
-							<select class="search-form__input" id="radius" name="radius">
-								<option selected disabled>Radius</option>
-								<option>10</option>
-								<option>25</option>
-								<option>50</option>
-								<option>75</option>
-								<option>100</option>
-							</select>
-						</div>
-						<select class="discover__form-input js-example-basic-multiple" id="certified" name="certified">
-							<option selected disabled>Craft Certification</option>
-							<option>Yes</option>
-							<option>No</option>
-						</select>
-						<button type="submit" class="btn-default btn-default-red">
-							<i class="fa fa-search" aria-hidden="true"></i>
-							Search
-						</button>
-					</form>
-					<ul class="navbar-nav ml-auto right-list">
-						<li><a href="sign-page.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Sign In</a></li>
-						<li><a href="sign-page.html"><i class="fa fa-user-o" aria-hidden="true"></i> Register</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-	<!-- End Header -->
-
-	<!-- explore-module -->
-	<section class="explore">
-		<div class="explore__side-content">
-
-			<div class="explore__filter explore__filter-side">
-				<!--form class="explore__form"-->
-				<h2 class="explore__filter-title">
-					<span>Results For:</span> {{zip_code}}
-				</h2>
-=======
 	<!-- Container -->
 	<div id="container">
 		<!-- Header -->
@@ -92,6 +29,11 @@
 									<option >75</option>
 									<option >100</option>
 								</select>
+								<select class="search-form__input" id="certified" name="certified">
+									<option selected disabled>Certified Craft Only</option>
+									<option >Yes</option>
+									<option >No</option>
+								</select>	
 							</div>
 							<button type="submit" class="btn-default btn-default-red">
 								<i class="fa fa-search" aria-hidden="true"></i>
@@ -117,7 +59,6 @@
 						<h2 class="explore__filter-title">
 							<span>Results For:</span> {{zip_code}}
 						</h2>
->>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 				<div class="explore__box explore__box-side">
 
 					<div class="explore__wrap iso-call">
@@ -126,12 +67,8 @@
 							<!-- place-post module -->
 							<div class="place-post">
 								<div class="place-post__gal-box">
-<<<<<<< HEAD
 									<img class="place-post__image" src="{{brewery.images.icon}}" onerror="this.onerror=null;this.src='./images/marker.png';"
 									 alt="place-image">
-=======
-									<img class="place-post__image" src="{{brewery.images.icon}}" onerror="this.onerror=null;this.src='./images/marker.png';" alt="place-image">
->>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 									<a class="place-post__like" href="#"><i aria-hidden="true"></i></a>
 								</div>
 								<div class="place-post__content">
@@ -144,7 +81,6 @@
 											<input type="hidden" name="longitude" value="{{longitude}}">
 											<input type="hidden" name="phone" value="{{phone}}">
 											<input type="hidden" name="website" value="{{brewery.website}}">
-<<<<<<< HEAD
 											<button type="submit" class="btn-default" id="{{brewery.id}}">{{brewery.nameShortDisplay}}</button>
 											<!-- id for result 1 Brewery Name -->
 										</form>
@@ -153,14 +89,6 @@
 										<i class="fa fa-map-marker" aria-hidden="true"></i>
 										{{streetAddress}}
 										<!-- id for result 1 Brewery address -->
-=======
-											<button type="submit" class="btn-default" id="{{brewery.id}}">{{brewery.nameShortDisplay}}</button> <!-- id for result 1 Brewery Name -->
-										</form> 										
-									</h2>
-									<p class="place-post__address">
-										<i class="fa fa-map-marker" aria-hidden="true"></i>
-										{{streetAddress}} <!-- id for result 1 Brewery address -->
->>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 									</p>
 								</div>
 							</div>
@@ -170,12 +98,7 @@
 
 					</div>
 					<div class="center-button">
-<<<<<<< HEAD
 						<a class="btn-default btn-default-red load-post-container" href="#">
-=======
-						<a class="btn-default btn-default-red load-post-container" 
-							href="#">
->>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 							<i class="fa fa-refresh"></i>
 							Load More Listing
 						</a>
@@ -188,17 +111,12 @@
 				<div id="map" data-map-zoom="9">
 				</div>
 				<!-- End map block -->
-<<<<<<< HEAD
 			</div>
-=======
-			</div>	
->>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 			<input type="hidden" id="lat" value="{{lat}}">
 			<input type="hidden" id="lng" value="{{lng}}">
 			<input type="hidden" id="data_json" value="{{result}}">
 			<!--input type="hidden" id="data_search" value={{result}}-->
 
-<<<<<<< HEAD
 	</section>
 	<!-- End explore-module -->
 
@@ -233,63 +151,10 @@
 			center: { lat: lat, lng: lng },
 			zoom: 8
 		});
-=======
-		</section>
-		<!-- End explore-module -->
-
-	</div>
-	<!-- End Container -->
-	
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.migrate.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uq660sOqIWpWFdN6tGwKUYR07jmx-Ww&callback=initMap" async defer></script>
-	<!--build:js js/triptip-plugins.min.js -->
-	<script>
-	  $(".item").slice(0, 4).show();
-	  $("#loadMore").on('click', function (e) {
-			e.preventDefault();
-			//$(".item:hidden").slice(0, 1).slideDown();
-			$(".item:hidden").slice(0, 2).show();
-			$('html,body').animate({
-				scrollTop: $(this).offset().top
-			}, 9000);
-			if ($(".item:hidden").length == 0) {
-            	$("#loadMore").fadeOut('slow');
-        	}		
-			/*$('html,body').animate({
-				scrollTop: $(this).offset().top
-			}, 9000)*/
-	  });
-
-	  /*$(function () {
-		$("#item_result").slice(0, 4).show();*/
-		/*$("#loadMore").on('click', function (e) {
-			e.preventDefault();
-			$("div:hidden").slice(0, 4).slideDown();
-			if ($("div:hidden").length == 0) {
-				$("#load").fadeOut('slow');
-			}
-			$('html,body').animate({
-				scrollTop: $(this).offset().top
-			}, 1500);
-		});*/
-	  //});
-
-      var map;
-	  var lat = $("#lat").val()*1;
-	  var lng = $("#lng").val()*1; 
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: lat, lng: lng},
-          zoom: 8
-        });
->>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
 		var json = JSON.parse($("#data_json").val());
 		var i = 0;
 		var myLatlng;
 		var marker;
-<<<<<<< HEAD
 		for (i; i < json.length; i++) {
 			myLatlng = new google.maps.LatLng(json[i].latitude, json[i].longitude);
 			marker = new google.maps.Marker({
@@ -317,32 +182,3 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.countTo.js"></script>
 <script src="js/script.js"></script>
-=======
-		for(i;i<json.length;i++){
-			myLatlng = new google.maps.LatLng(json[i].latitude,json[i].longitude);
-			marker = new google.maps.Marker({
-    			position: myLatlng,
-   		 		title:json[i].name,
-			    icon: "images/marker.png"
-			});
-			marker.setMap(map);
-		}
-      }
-    </script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/select2.min.js"></script>
-	<script src="js/jquery.imagesloaded.min.js"></script>
-  	<script src="js/jquery.isotope.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/retina-1.1.0.min.js"></script>
-	<script src="js/jquery.appear.js"></script>
-	<script src="js/infobox.min.js"></script>
-	<script src="js/markerclusterer.js"></script>
-	<script src="js/maps.js"></script>
-	<!-- endbuild -->
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.countTo.js"></script>
-	<script src="js/script.js"></script>
->>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f

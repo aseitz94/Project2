@@ -1,26 +1,16 @@
 {
-  "name": "handlebars-boilerplate",
+  "name": "project2",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "HopStop : Discover new Beer",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "lint": "eslint **/*.js --quiet",
-    "fix": "eslint --fix .",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+  "directories": {
+    "test": "test"
   },
-  "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
-<<<<<<< HEAD
-    "method-override": "^3.0.0",
-    "mysql2": "^1.5.3",
-    "request": "^2.88.0",
-    "sequelize": "^4.38.0",
-=======
     "express-session": "^1.15.6",
     "method-override": "^3.0.0",
     "mysql2": "^1.6.4",
@@ -29,25 +19,19 @@
     "prettier": "^1.16.1",
     "request": "^2.88.0",
     "sequelize": "^4.42.0",
->>>>>>> 3c9675c50960a349259fcd7e9155d385d9dd460f
     "zipcodes": "^8.0.0"
   },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.0.0",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.2",
-    "mocha": "^5.2.0"
-  },
-  "directories": {
-    "test": "test"
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aseitz94/Project2.git"
   },
   "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/aseitz94/Project2/issues"
   },
