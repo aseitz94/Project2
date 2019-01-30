@@ -48,22 +48,25 @@ module.exports = {
           //empty the Brewery Array
           var breweriesArray = [];
           for (var i = 0; i < apiData.length; i++) {
-            if (
-              apiData[i].openToPublic === "Y" &&
-              apiData[i].isClosed === "N"
-            ) {
+            if (apiData[i].brewery) {
               if (
-                certified === "Yes" &&
-                typeof (apiData[i].brewery.brewersAssociation) !== "undefined" &&
-                (apiData[i].brewery.brewersAssociation.isCertifiedCraftBrewer) ===
-                  "Y"
+                apiData[i].openToPublic === "Y" &&
+                apiData[i].isClosed === "N"
               ) {
-                breweriesArray.push(apiData[i]);
-              } else if (certified === "No") {
-                breweriesArray.push(apiData[i]);
+                if (
+                  certified === "Yes" &&
+                  typeof (apiData[i].brewery.brewersAssociation) !== "undefined" &&
+                  (apiData[i].brewery.brewersAssociation.isCertifiedCraftBrewer) ===
+                    "Y"
+                ) {
+                  breweriesArray.push(apiData[i]);
+                } else if (certified === "No") {
+                  breweriesArray.push(apiData[i]);
+                }
               }
             }
           }
+
           // result = breweriesArray;
           return callback(breweriesArray, false);
         } else {
