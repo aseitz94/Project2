@@ -1,20 +1,22 @@
 {
-  "name": "project2",
+  "name": "handlebars-boilerplate",
   "version": "1.0.0",
-  "description": "HopStop : Discover new Beer",
+  "description": "Project 2 Starter",
   "main": "server.js",
-  "directories": {
-    "test": "test"
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint **/*.js --quiet",
+    "fix": "eslint --fix .",
+    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
+  "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "chai": "^4.2.0",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "method-override": "^3.0.0",
-    "mocha": "^5.2.0",
     "mysql2": "^1.6.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
@@ -23,17 +25,22 @@
     "sequelize": "^4.42.0",
     "zipcodes": "^8.0.0"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "mocha",
-    "start": "node server.js"
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "mocha": "^5.2.0"
+  },
+  "directories": {
+    "test": "test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aseitz94/Project2.git"
   },
   "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/aseitz94/Project2/issues"
   },
