@@ -1,4 +1,4 @@
-# HopSpot
+# HopSpot - Penn Coding Bootcamp Project 2
 
 ## Table of contents
   * [About this project](#about-this-project)
